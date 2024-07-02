@@ -1,0 +1,29 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type GetRandomDto {
+  categories: [String!]!
+  created_at: String!
+  icon_url: String!
+  id: String!
+  updated_at: String!
+  url: String!
+  value: String!
+}
+
+type CategoriesDto {
+  categories: [String!]!
+}
+
+type SearchResultDto {
+  total: Float!
+  result: [GetRandomDto!]!
+}
+
+type Query {
+  random: GetRandomDto!
+  searchCategory(category: String): GetRandomDto!
+  categories: CategoriesDto!
+  searchWord(searchWord: String): SearchResultDto!
+}
