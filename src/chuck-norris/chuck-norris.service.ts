@@ -1,10 +1,10 @@
-import { HttpException, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import axios from 'axios';
 import { GetRandomDto } from './dtos/get-random.dto';
 import { SearchResultDto } from './dtos/get-search.dto';
 
 @Injectable()
-export class JokesService {
+export class ChuckNorrisService {
   async getRandom(): Promise<GetRandomDto> {
     const response = await axios.get<GetRandomDto>(
       'https://api.chucknorris.io/jokes/random',
